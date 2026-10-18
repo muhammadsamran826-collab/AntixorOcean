@@ -1,0 +1,310 @@
+/* ==========================================================================
+   ANTIXOR OCEAN — LUXURY YACHT RENTAL & BOAT BOOKING
+   Responsive Media Queries & Mobile Adaptation
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Desktop Refinements (1025px - 1280px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1280px) {
+  :root {
+    --container-padding: 20px;
+  }
+
+  .category-grid,
+  .destination-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .lifestyle-content {
+    padding: 48px 36px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Tablets (769px - 1024px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .section {
+    padding: 72px 0;
+  }
+
+  /* Header adjustments */
+  .main-nav {
+    display: none;
+  }
+
+  .hamburger-btn {
+    display: flex;
+  }
+
+  /* Booking Floating Panel */
+  .booking-form {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .btn-search-submit {
+    grid-column: span 2;
+  }
+
+  /* Lifestyle Split */
+  .lifestyle-split {
+    grid-template-columns: 1fr;
+  }
+
+  .lifestyle-media {
+    min-height: 420px;
+  }
+
+  /* Statistics Banner */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  /* Catalog Layout */
+  .catalog-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .catalog-filter-card {
+    position: static;
+    margin-bottom: 30px;
+  }
+
+  /* Yacht Details Layout */
+  .yacht-detail-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-booking-widget {
+    position: static;
+    margin-top: 30px;
+  }
+
+  /* Booking Page Layout */
+  .booking-page-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-summary-card {
+    position: static;
+  }
+
+  /* Footer */
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+
+  .footer-col:first-child {
+    grid-column: span 2;
+  }
+
+  .footer-col:last-child {
+    grid-column: span 2;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Mobile Phones & Small Tablets (up to 768px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  :root {
+    --container-padding: 16px;
+  }
+
+  .section {
+    padding: 56px 0;
+  }
+
+  .hero-banner {
+    padding: 130px 0 90px;
+    min-height: auto;
+  }
+
+  .hero-title {
+    font-size: 2.25rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-trust-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  /* Booking panel vertical stack */
+  .booking-panel-wrapper {
+    margin-top: -30px;
+  }
+
+  .booking-panel {
+    padding: 20px 16px;
+    border-radius: var(--radius-lg);
+  }
+
+  .booking-tabs {
+    gap: 6px;
+    padding-bottom: 12px;
+  }
+
+  .booking-tab-btn {
+    padding: 8px 14px;
+    font-size: 0.8125rem;
+  }
+
+  .booking-form {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .btn-search-submit {
+    grid-column: auto;
+    width: 100%;
+  }
+
+  /* Cards Grids */
+  .yacht-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .category-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .destination-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* Lifestyle Banner */
+  .lifestyle-content {
+    padding: 40px 24px;
+  }
+
+  .lifestyle-highlights-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .lifestyle-media-badge {
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    padding: 12px 16px;
+  }
+
+  /* Stats Grid */
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .stat-number {
+    font-size: 2.8rem;
+  }
+
+  /* Testimonials */
+  .testimonial-card {
+    padding: 28px 20px;
+  }
+
+  .testimonial-quote-icon {
+    font-size: 4rem;
+    top: 20px;
+    right: 20px;
+  }
+
+  .testimonial-author-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  /* Yacht Details Page */
+  .detail-main-img-wrap {
+    height: 320px;
+  }
+
+  .detail-thumbnails {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+  }
+
+  .thumbnail-item {
+    height: 65px;
+  }
+
+  .amenities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .specs-table td {
+    padding: 10px 14px;
+    font-size: 0.875rem;
+  }
+
+  /* Booking Page */
+  .booking-card {
+    padding: 24px 18px;
+  }
+
+  .confirmation-card {
+    padding: 32px 20px;
+  }
+
+  /* Catalog Toolbar */
+  .catalog-toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .toolbar-controls {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  /* Footer */
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer-col:first-child,
+  .footer-col:last-child {
+    grid-column: auto;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .footer-bottom-links {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Reduced Motion Preferences
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

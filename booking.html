@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reserve Your Yacht Charter — Antixor Ocean</title>
+  <meta name="description" content="Submit a bespoke yacht booking inquiry. Choose your luxury yacht, charter date, duration, and tailored onboard services." />
+  
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- Global Header -->
+  <header class="site-header header-opaque" id="siteHeader">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo" aria-label="Antixor Ocean Homepage">
+        <div class="brand-symbol">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><path d="M2 12c2.5-3 5-3 7.5 0s5 3 7.5 0 5-3 5-3"></path></svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">Antixor <span>Ocean</span></span>
+          <span class="brand-tagline">Luxury Yacht Charter</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="boats.html" class="nav-link">Boats</a></li>
+          <li><a href="destinations.html" class="nav-link">Destinations</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn-search-trigger" aria-label="Search fleet" title="Search fleet">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+        <a href="booking.html" class="btn btn-gold btn-sm">Book Now</a>
+        <button class="hamburger-btn" aria-label="Toggle mobile menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="drawer-backdrop"></div>
+  <aside class="mobile-drawer">
+    <div class="drawer-top">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-symbol"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M2 12c2.5-3 5-3 7.5 0s5 3 7.5 0 5-3 5-3"></path></svg></div>
+        <div class="brand-text"><span class="brand-name">Antixor <span>Ocean</span></span></div>
+      </a>
+      <button class="drawer-close">&times;</button>
+    </div>
+    <ul class="drawer-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="boats.html">Boats Fleet</a></li>
+      <li><a href="destinations.html">Destinations</a></li>
+      <li><a href="about.html">About Antixor</a></li>
+      <li><a href="contact.html">Contact &amp; Inquiries</a></li>
+    </ul>
+  </aside>
+
+  <!-- Global Search Modal -->
+  <div class="search-modal-backdrop" id="searchModalBackdrop" role="dialog" aria-modal="true">
+    <div class="search-modal-card">
+      <div class="search-modal-head">
+        <h3>Search Antixor Fleet</h3>
+        <button class="search-close-btn">&times;</button>
+      </div>
+      <form class="search-modal-form">
+        <div class="search-input-wrapper">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" class="search-modal-input" placeholder="Search by yacht model or destination..." />
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <main>
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="container page-hero-content">
+        <span class="eyebrow" style="color:var(--gold);">TAILORED CHARTER RESERVATION</span>
+        <h1>Charter Booking Request</h1>
+        <p>Complete your bespoke seafaring details. Our private concierge coordinates every nuance of your voyage.</p>
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <span>Charter Booking</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Booking Form & Summary Section -->
+    <section class="section" style="padding-top: 60px;">
+      <div class="container">
+        <div class="booking-page-layout">
+          
+          <!-- Left: Booking Form -->
+          <div class="booking-card">
+            <h3>Charter Specifications</h3>
+
+            <form id="charterBookingForm" novalidate>
+              <!-- Yacht Selection -->
+              <div class="form-group" style="margin-bottom: 20px;">
+                <label for="bookingYachtSelect">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
+                  Selected Vessel
+                </label>
+                <div class="input-with-icon">
+                  <select id="bookingYachtSelect" required>
+                    <!-- Populated via js/booking.js -->
+                  </select>
+                </div>
+              </div>
+
+              <!-- Date & Duration Row -->
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+                <div class="form-group">
+                  <label for="bookingDate">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                    Charter Start Date
+                  </label>
+                  <div class="input-with-icon">
+                    <input type="date" id="bookingDate" required />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="bookingDuration">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    Charter Duration
+                  </label>
+                  <div class="input-with-icon">
+                    <select id="bookingDuration" required>
+                      <option value="1">1 Full Day (8 Hours)</option>
+                      <option value="0.5">Half Day (4 Hours)</option>
+                      <option value="2">2 Days (Weekend Cruise)</option>
+                      <option value="3">3 Days (Extended Voyage)</option>
+                      <option value="7">7 Days (Weekly Charter)</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Guests Count -->
+              <div class="form-group" style="margin-bottom: 30px;">
+                <label for="bookingGuests">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
+                  Estimated Number of Guests
+                </label>
+                <div class="input-with-icon">
+                  <select id="bookingGuests">
+                    <!-- Populated dynamically based on yacht capacity -->
+                  </select>
+                </div>
+              </div>
+
+              <h3 style="font-size: 1.35rem; margin-top: 36px;">Charter Guest Information</h3>
+
+              <!-- Name & Email -->
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+                <div class="form-group">
+                  <label for="custName">Full Name *</label>
+                  <div class="input-with-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    <input type="text" id="custName" placeholder="e.g. Lord Marcus Sterling" required />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="custEmail">Email Address *</label>
+                  <div class="input-with-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    <input type="email" id="custEmail" placeholder="sterling@private.com" required />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Phone & Custom Requests -->
+              <div class="form-group" style="margin-bottom: 20px;">
+                <label for="custPhone">Phone Number (Optional)</label>
+                <div class="input-with-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                  <input type="tel" id="custPhone" placeholder="+1 (555) 019-2834" />
+                </div>
+              </div>
+
+              <div class="form-group" style="margin-bottom: 24px;">
+                <label for="custNotes">Special Requests &amp; Bespoke Preferences</label>
+                <textarea id="custNotes" rows="3" placeholder="Dietary preferences, champagne selection, celebratory occasions (anniversary, birthday), special route requests..." style="width:100%; padding:14px; border:1.5px solid var(--border-color); border-radius:var(--radius-md); font-family:inherit; font-size:0.9375rem; outline:none;"></textarea>
+              </div>
+
+              <!-- Charter Agreement -->
+              <div style="margin-bottom: 30px;">
+                <label class="filter-checkbox-label">
+                  <input type="checkbox" id="agreeTerms" required checked />
+                  <span style="font-size:0.875rem; color:var(--text-secondary);">
+                    I understand this is an illustrative demonstration booking request. No payment card details are collected or processed.
+                  </span>
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-gold btn-lg" style="width:100%;">
+                Submit Booking Request
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </form>
+          </div>
+
+          <!-- Right: Summary Card -->
+          <aside>
+            <div class="booking-summary-card">
+              <h3 style="font-size:1.35rem; margin-bottom:20px;">Charter Summary</h3>
+              
+              <!-- Live Yacht Preview -->
+              <div class="summary-yacht-preview" id="yachtSummaryPreview">
+                <!-- Populated via js/booking.js -->
+              </div>
+
+              <!-- Estimated Price Breakdown -->
+              <div class="price-estimate-box" style="margin-bottom: 24px;">
+                <div class="price-row">
+                  <span id="summaryDurationLabel">Charter Rate</span>
+                  <strong id="summaryBaseRate" style="color:var(--navy-deep);">$2,500</strong>
+                </div>
+                <div class="price-row">
+                  <span>Captain &amp; Professional Crew</span>
+                  <span style="color:var(--turquoise); font-weight:600;">Complimentary</span>
+                </div>
+                <div class="price-row">
+                  <span>Welcome Champagne &amp; Canapés</span>
+                  <span style="color:var(--turquoise); font-weight:600;">Complimentary</span>
+                </div>
+                <div class="price-row">
+                  <span>Port Surcharges &amp; Marine Conservation</span>
+                  <span id="summaryPortFee">$125</span>
+                </div>
+                <div class="price-row total">
+                  <span>Estimated Total (Demo)</span>
+                  <span id="summaryGrandTotal" style="color:var(--navy-deep); font-size:1.35rem;">$2,625</span>
+                </div>
+              </div>
+
+              <div class="demo-disclaimer-alert">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                <div>
+                  <strong>No Payment Card Required</strong>
+                  <p style="font-size:0.75rem; margin-top:2px;">This demo demonstrates frontend booking logic, duration calculations, and validation states. No actual charges apply.</p>
+                </div>
+              </div>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Booking Confirmation Modal -->
+  <div class="modal-backdrop" id="bookingConfirmationModal" role="dialog" aria-modal="true">
+    <div class="confirmation-card">
+      <div class="confirmation-icon">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+      </div>
+      <div id="modalConfirmationContent">
+        <!-- Rendered via js/booking.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="footer-wave-accent"></div>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" style="margin-bottom:16px;">
+            <div class="brand-symbol"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M2 12c2.5-3 5-3 7.5 0s5 3 7.5 0 5-3 5-3"></path></svg></div>
+            <div class="brand-text"><span class="brand-name">Antixor <span>Ocean</span></span></div>
+          </a>
+          <p>Antixor Ocean is the premier luxury yacht rental brand offering bespoke seafaring journeys worldwide.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="boats.html">Fleet Catalog</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="about.html">About Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Vessel Types</h4>
+          <ul class="footer-links">
+            <li><a href="boats.html?category=luxury-yachts">Luxury Yachts</a></li>
+            <li><a href="boats.html?category=speed-boats">Speed Boats</a></li>
+            <li><a href="boats.html?category=catamarans">Catamarans</a></li>
+            <li><a href="boats.html?category=sailing-boats">Sailing Boats</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Charter Ports</h4>
+          <ul class="footer-links">
+            <li><a href="boats.html?location=Maldives">Maldives</a></li>
+            <li><a href="boats.html?location=Santorini">Santorini</a></li>
+            <li><a href="boats.html?location=Dubai">Dubai</a></li>
+            <li><a href="boats.html?location=Bali">Bali</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Ocean Dispatches</h4>
+          <p>Join private charter dispatches and seasonal announcements.</p>
+          <form class="footer-newsletter-form">
+            <div class="newsletter-input-group">
+              <input type="email" placeholder="Your luxury email" required />
+              <button type="submit" class="btn btn-gold btn-sm">Subscribe</button>
+            </div>
+            <div class="newsletter-msg"></div>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Antixor Ocean. All rights reserved.
+          <p class="footer-demo-note">Demonstration charter reservation flow. Sample rates and yacht configurations for illustrative evaluation.</p>
+        </div>
+        <div class="footer-bottom-links">
+          <a href="about.html">Charter Terms</a>
+          <a href="about.html">Privacy</a>
+          <a href="contact.html">Support</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/boats-data.js"></script>
+  <script src="js/destinations-data.js"></script>
+  <script src="js/site-data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/booking.js"></script>
+</body>
+</html>

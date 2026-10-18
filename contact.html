@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Charter Concierge — Antixor Ocean</title>
+  <meta name="description" content="Connect with the Antixor Ocean global concierge team. Consult on bespoke charter itineraries, private dining, and luxury vessel availability." />
+  
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- Global Header -->
+  <header class="site-header header-opaque" id="siteHeader">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo" aria-label="Antixor Ocean Homepage">
+        <div class="brand-symbol">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><path d="M2 12c2.5-3 5-3 7.5 0s5 3 7.5 0 5-3 5-3"></path></svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">Antixor <span>Ocean</span></span>
+          <span class="brand-tagline">Luxury Yacht Charter</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="boats.html" class="nav-link">Boats</a></li>
+          <li><a href="destinations.html" class="nav-link">Destinations</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn-search-trigger" aria-label="Search fleet" title="Search fleet">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+        <a href="booking.html" class="btn btn-gold btn-sm">Book Now</a>
+        <button class="hamburger-btn" aria-label="Toggle mobile menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="drawer-backdrop"></div>
+  <aside class="mobile-drawer">
+    <div class="drawer-top">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-symbol"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M2 12c2.5-3 5-3 7.5 0s5 3 7.5 0 5-3 5-3"></path></svg></div>
+        <div class="brand-text"><span class="brand-name">Antixor <span>Ocean</span></span></div>
+      </a>
+      <button class="drawer-close">&times;</button>
+    </div>
+    <ul class="drawer-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="boats.html">Boats Fleet</a></li>
+      <li><a href="destinations.html">Destinations</a></li>
+      <li><a href="about.html">About Antixor</a></li>
+      <li><a href="contact.html" class="active">Contact &amp; Inquiries</a></li>
+    </ul>
+    <div class="drawer-bottom">
+      <a href="booking.html" class="btn btn-gold btn-lg" style="width:100%;">Book a Yacht</a>
+    </div>
+  </aside>
+
+  <!-- Global Search Modal -->
+  <div class="search-modal-backdrop" id="searchModalBackdrop" role="dialog" aria-modal="true">
+    <div class="search-modal-card">
+      <div class="search-modal-head">
+        <h3>Search Antixor Fleet</h3>
+        <button class="search-close-btn">&times;</button>
+      </div>
+      <form class="search-modal-form">
+        <div class="search-input-wrapper">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" class="search-modal-input" placeholder="Search by yacht model or destination..." />
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <main>
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="container page-hero-content">
+        <span class="eyebrow" style="color:var(--gold);">DISCRETE &amp; RESPONSIVE</span>
+        <h1>Private Charter Concierge</h1>
+        <p>Our experienced charter directors and maritime specialists are available around the clock to coordinate your voyage.</p>
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <span>Contact Concierge</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Content Layout -->
+    <section class="section" style="padding-top: 60px;">
+      <div class="container">
+        <div style="display:grid; grid-template-columns:1.2fr 1fr; gap:60px; align-items:flex-start;">
+          
+          <!-- Contact Form Card -->
+          <div class="booking-card">
+            <h3>Send a Consultation Request</h3>
+            <p style="margin-bottom:28px; font-size:0.9375rem; color:var(--text-secondary);">
+              Whether you require a specific yacht recommendation, advice on seasonal cruising conditions, or private event planning, our team is at your service.
+            </p>
+
+            <div id="contactFeedbackMsg" style="display:none; margin-bottom:24px;"></div>
+
+            <form id="contactInquiryForm" novalidate>
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-bottom:20px;">
+                <div class="form-group">
+                  <label for="contactName">Your Full Name *</label>
+                  <div class="input-with-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    <input type="text" id="contactName" placeholder="e.g. Sophia Chen" required />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="contactEmail">Email Address *</label>
+                  <div class="input-with-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    <input type="email" id="contactEmail" placeholder="sophia@luxury.ch" required />
+                  </div>
+                </div>
+              </div>
+
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-bottom:20px;">
+                <div class="form-group">
+                  <label for="contactPhone">Phone / WhatsApp</label>
+                  <div class="input-with-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    <input type="tel" id="contactPhone" placeholder="+41 22 555 0199" />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="contactSubject">Inquiry Focus</label>
+                  <div class="input-with-icon">
+                    <select id="contactSubject">
+                      <option value="Private Yacht Charter">Private Yacht Charter</option>
+                      <option value="Multi-day Island Hopping">Multi-day Island Hopping</option>
+                      <option value="Corporate / VIP Event">Corporate / VIP Event</option>
+                      <option value="Bespoke Route Planning">Bespoke Route Planning</option>
+                      <option value="General Question">General Inquiry</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group" style="margin-bottom:24px;">
+                <label for="contactMessage">Message &amp; Anticipated Dates *</label>
+                <textarea id="contactMessage" rows="4" placeholder="Tell us about your preferred yacht type, travel dates, guest count, and any special requests..." required style="width:100%; padding:14px; border:1.5px solid var(--border-color); border-radius:var(--radius-md); font-family:inherit; font-size:0.9375rem; outline:none;"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-gold btn-lg" style="width:100%;">
+                Send Charter Inquiry
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              </button>
+            </form>
+          </div>
+
+          <!-- Contact Details Cards -->
+          <div style="display:flex; flex-direction:column; gap:24px;">
+            <!-- Global HQ Card -->
+            <div style="background:var(--white); border-radius:var(--radius-xl); padding:32px; border:1px solid var(--border-color); box-shadow:var(--shadow-sm);">
+              <span class="badge badge-soft" style="margin-bottom:12px;">GLOBAL FLAGSHIP DESK</span>
+              <h3 style="font-size:1.35rem; margin-bottom:14px;">Antixor Ocean International</h3>
+              <p style="font-size:0.9375rem; color:var(--text-secondary); line-height:1.6; margin-bottom:16px;">
+                Port Hercules Marina, Suite 402<br />
+                98000 Monaco, Principality of Monaco
+              </p>
+              
+              <div style="display:flex; flex-direction:column; gap:10px; font-size:0.9375rem;">
+                <div style="display:flex; align-items:center; gap:10px;">
+                  <strong style="color:var(--navy-deep); width:80px;">Telephone:</strong>
+                  <a href="tel:+18008459224" style="color:var(--ocean-teal); font-weight:600;">+1 (800) 845-9224</a>
+                </div>
+                <div style="display:flex; align-items:center; gap:10px;">
+                  <strong style="color:var(--navy-deep); width:80px;">Email:</strong>
+                  <a href="mailto:concierge@antixorocean.com" style="color:var(--ocean-teal); font-weight:600;">concierge@antixorocean.com</a>
+                </div>
+                <div style="display:flex; align-items:center; gap:10px;">
+                  <strong style="color:var(--navy-deep); width:80px;">Operating:</strong>
+                  <span style="color:var(--turquoise); font-weight:600;">24/7 Global Maritime Dispatch</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Regional Operation Stations -->
+            <div style="background:var(--white); border-radius:var(--radius-xl); padding:32px; border:1px solid var(--border-color); box-shadow:var(--shadow-sm);">
+              <h3 style="font-size:1.25rem; margin-bottom:16px;">Regional Charter Stations</h3>
+              <ul style="list-style:none; display:flex; flex-direction:column; gap:14px; font-size:0.9375rem;">
+                <li style="display:flex; justify-content:space-between; border-bottom:1px solid var(--border-light); padding-bottom:8px;">
+                  <strong>Maldives (North Malé Atoll)</strong>
+                  <span style="color:var(--ocean-teal);">Vessel Mooring Hub</span>
+                </li>
+                <li style="display:flex; justify-content:space-between; border-bottom:1px solid var(--border-light); padding-bottom:8px;">
+                  <strong>Santorini (Ammoudi Bay)</strong>
+                  <span style="color:var(--ocean-teal);">Aegean Dispatch</span>
+                </li>
+                <li style="display:flex; justify-content:space-between; border-bottom:1px solid var(--border-light); padding-bottom:8px;">
+                  <strong>Dubai (Dubai Marina Yacht Club)</strong>
+                  <span style="color:var(--ocean-teal);">Arabian Gulf Fleet</span>
+                </li>
+                <li style="display:flex; justify-content:space-between;">
+                  <strong>Bali (Serangan Harbor)</strong>
+                  <span style="color:var(--ocean-teal);">Indo-Pacific Station</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Demonstration Note -->
+            <div class="demo-disclaimer-alert">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+              <div>
+                <strong>Inquiry Form Notice:</strong>
+                <p style="font-size:0.75rem; margin-top:2px;">This is a demonstration client interface. Form submissions test interactive UI feedback without transmitting personal data to real email servers.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="footer-wave-accent"></div>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" style="margin-bottom:16px;">
+            <div class="brand-symbol"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M2 12c2.5-3 5-3 7.5 0s5 3 7.5 0 5-3 5-3"></path></svg></div>
+            <div class="brand-text"><span class="brand-name">Antixor <span>Ocean</span></span></div>
+          </a>
+          <p>Antixor Ocean is the premier luxury yacht rental brand offering bespoke seafaring journeys worldwide.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="boats.html">Fleet Catalog</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="about.html">About Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Vessel Types</h4>
+          <ul class="footer-links">
+            <li><a href="boats.html?category=luxury-yachts">Luxury Yachts</a></li>
+            <li><a href="boats.html?category=speed-boats">Speed Boats</a></li>
+            <li><a href="boats.html?category=catamarans">Catamarans</a></li>
+            <li><a href="boats.html?category=sailing-boats">Sailing Boats</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Charter Ports</h4>
+          <ul class="footer-links">
+            <li><a href="boats.html?location=Maldives">Maldives</a></li>
+            <li><a href="boats.html?location=Santorini">Santorini</a></li>
+            <li><a href="boats.html?location=Dubai">Dubai</a></li>
+            <li><a href="boats.html?location=Bali">Bali</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Ocean Dispatches</h4>
+          <p>Join private charter dispatches and seasonal announcements.</p>
+          <form class="footer-newsletter-form">
+            <div class="newsletter-input-group">
+              <input type="email" placeholder="Your luxury email" required />
+              <button type="submit" class="btn btn-gold btn-sm">Subscribe</button>
+            </div>
+            <div class="newsletter-msg"></div>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Antixor Ocean. All rights reserved.
+          <p class="footer-demo-note">Demonstration contact interface for portfolio evaluation.</p>
+        </div>
+        <div class="footer-bottom-links">
+          <a href="about.html">Charter Terms</a>
+          <a href="about.html">Privacy</a>
+          <a href="contact.html">Support</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/boats-data.js"></script>
+  <script src="js/destinations-data.js"></script>
+  <script src="js/site-data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>
